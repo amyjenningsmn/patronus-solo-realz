@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="patroniApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Patroni</title>
+    <link rel="stylesheet" href="views/bootstrap.css">
+    <link rel="stylesheet" href="views/style.css">
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="assets/scripts/client.min.js"></script>
+  </head>
+  <body ng-controller="MainController as person">
+    <div class = "container">
+      <h1>Patronium</h1>
+
+      <form ng-submit="person.sendPersonData()">
+        <h2>Add a New Person</h2>
+
+        <label>First Name:</label>
+        <input type=text ng-model="person.personObject.first_name" maxlength="255" />
+
+        <label>Last Name:</label>
+        <input type=text ng-model="person.personObject.last_name" maxlength="255" />
+        <input type="submit" />
+      </form>
+
+      <form ng-submit="person.sendPatronusData()">
+        <h2>Add a New Patronus</h2>
+        <label>Patronus:</label>
+        <input type="text" ng-model="person.patronusObject.patronus_name" maxlength="255" />
+        <input type="submit" />
+      </form>
+
+      <h2>Unassigned People</h2>
+        <div ng-repeat="listPerson in person.personList">
+          <!-- <p>{{listPerson.first_name}} {{listPerson.last_name}}</p> -->
+          <p>{{listPerson.first_name}} {{listPerson.last_name}} {{listPerson.patronus_id}}</p>
+          <!-- This is just to see if they're linked, they are. Figure out rest in Hard Mode -->
+        </div>
+
+      <h2>Available Patroni</h2>
+      <div ng-repeat="eachPatronus in person.patronusList">
+        <p>{{eachPatronus.patronus_name}}</p>
+      </div>
+
+
+    </div>
+  </body>
+</html>

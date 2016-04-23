@@ -1,0 +1,32 @@
+{
+  "name": "patronus",
+  "version": "1.0.0",
+  "description": "Normal Mode View Mockups here",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/courtneygives/Patronus-Tool.git"
+  },
+  "author": "kyle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/courtneygives/Patronus-Tool/issues"
+  },
+  "homepage": "https://github.com/courtneygives/Patronus-Tool#readme",
+  "dependencies": {
+    "angular": "^1.5.5",
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "grunt": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "pg": "^4.5.3"
+  },
+  "devDependencies": {
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
